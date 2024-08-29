@@ -16,3 +16,15 @@ for num in squared_nums:
 # Here we are using a generator expression to calculate the sum of squares of the numbers in the list
 sum_of_squares = sum(num ** 2 for num in nums)
 print(sum_of_squares)  # Output: 55
+
+#snippet 3
+def fibonacci():
+    a, b = 0, 1
+    while True:
+        yield a
+        a, b = b, a + b
+
+# Get the first 10 Fibonacci numbers
+fib_gen = fibonacci()
+for _ in range(10):
+    print(next(fib_gen))
